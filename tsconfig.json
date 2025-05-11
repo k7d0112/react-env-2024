@@ -2,11 +2,15 @@
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+    { "path": "./tsconfig.node.json" },
   ],
-  // import alias
-  "baseUrl": "./",
-  "paths": {
-    "@/*": ["src/*"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    "types": ["vitest/globals"]
   },
+  "include": ["src", "vitest-setup.ts"],
 }
